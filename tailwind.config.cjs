@@ -4,17 +4,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primaryColor: "rgb(99, 102, 241)",
-        secondaryColor: "rgb(161, 163, 247)",
+        primaryColor: "rgb(140, 200, 220)",
+        secondaryColor: "rgb(140, 200, 220)",
         primaryText: "rgb(255,255,255)",
         secondaryText: "rgb(174, 178, 183)",
         bgDark1: "rgb(31, 32, 35)",
-        bgDark2: "rgb(38, 39, 43)",
-        bgDark3: "rgb(48, 49, 54)",
-        bgDark3Hover: "rgb(55, 56, 62)",
-        bgDarkTransparent: "rgb(31, 32, 35, 0.7)",
-        bgDarkTransparentDarker: "rgb(0,0,0,0.5)",
-        bgDarkTransparentLighter: "rgb(48, 49, 54, 0.7)",
+        bgDark2: "rgb(31, 32, 35)",
+        bgDark3: "rgb(31, 32, 35)",
+        bgDark3Hover: "rgb(31, 32, 35)",
+        bgDarkTransparent: "rgb(31, 32, 35)",
+        bgDarkTransparentDarker: "rgb(31, 32, 35)",
+        bgDarkTransparentLighter: "rgb(31, 32, 35)",
         mainBorder: "rgb(255,255,255,0.15)",
         mainBorderDarker: "rgb(255,255,255,0.07)",
         quoteIconColor: "rgb(178, 184, 205)"
