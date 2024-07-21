@@ -24,6 +24,11 @@ export const Navbar = () => {
           className="flex-1 flex justify-start items-center"
         >
           <a href="/#home" aria-label="Home" className="flex items-center">
+            <img
+              src="/logos/doughploma.png"
+              alt="Doughploma Logo"
+              className="w-10 h-10"
+              />
             <div className="text-white font-['Inter'] font-bold text-xl">
               Doughploma
             </div>
