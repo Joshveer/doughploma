@@ -2,9 +2,9 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navbarLinks = [
-  { label: "Home", href: "#home", ariaLabel: "Home" },
-  { label: "Analytics", href: "#analytics", ariaLabel: "Analytics" },
-  { label: "About", href: "#about", ariaLabel: "About" },
+  { label: "Home", href: "/", ariaLabel: "Home" },
+  { label: "Analytics", href: "/analytics", ariaLabel: "Analytics" },
+  { label: "About", href: "/about", ariaLabel: "About" },
 ];
 
 export const Navbar = () => {
@@ -23,12 +23,12 @@ export const Navbar = () => {
           exit={{ opacity: 0 }}
           className="flex-1 flex justify-start items-center"
         >
-          <a href="/#home" aria-label="Home" className="flex items-center">
+          <a href="/" aria-label="Home" className="flex items-center">
             <img
               src="/logos/doughploma.png"
               alt="Doughploma Logo"
               className="w-10 h-10"
-              />
+            />
             <div className="text-white font-['Inter'] font-bold text-xl">
               Doughploma
             </div>
@@ -59,7 +59,6 @@ export const Navbar = () => {
           </div>
         </div>
       </div>
-      {/* Mobile navbar */}
       <AnimatePresence>
         {isOpen && (
           <motion.div

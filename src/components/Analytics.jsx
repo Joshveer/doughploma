@@ -22,11 +22,10 @@ export const Analytics = () => {
   };
 
   return (
-    <section className="w-full min-h-screen bg-bgDark2 flex justify-center items-center py-12" id="analytics">
+    <div className="w-full min-h-screen bg-bgDark2 flex justify-center items-center py-12">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
         className="w-full max-w-md px-4"
       >
@@ -78,6 +77,6 @@ export const Analytics = () => {
           <p className="mt-4 text-center text-secondaryText font-Inter">{submitStatus}</p>
         )}
       </motion.div>
-    </section>
+    </div>
   );
 };

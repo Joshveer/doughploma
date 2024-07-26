@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Navbar } from '../components/Navbar.jsx';
+import { Footer } from '../components/Footer.jsx';
+import '../styles/Theme.css';
+import '../styles/Diagonals.css';
+
+// This will be used as a fallback if client-side JS is disabled
+const serverQuery = Astro.url.searchParams.get('query') || '';
+---
+
+<Layout title="Stock Information - Doughploma">
+  <Navbar client:load />
+  <main class="w-full min-h-screen bg-bgDark2 flex justify-center items-center py-20">
+    <div class="w-full max-w-4xl px-4">
+      <h1 class="text-primaryText text-4xl mb-8 text-center font-Inter font-bold">Stock Information</h1>
+      <p class="text-secondaryText text-xl mb-4 text-center">
+        Showing results for: <span id="querySpan" class="text-primaryColor">{serverQuery}</span>
+      </p>
+      <!-- Add your stock information component or content here -->
+      <div class="bg-bgDark3 p-6 rounded-lg">
+        <p class="text-primaryText">
+          Here you can display the stock information, charts, or any other relevant data for the searched query.
+        </p>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  // This script runs on the client side
+  function updateQueryDisplay() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('query');
+    const querySpan = document.getElementById('querySpan');
+    if (querySpan && query) {
+      querySpan.textContent = query;
+    }
+  }
+
+  // Run on page load
+  updateQueryDisplay();
+
+  // Also run on popstate event (when navigating through browser history)
+  window.addEventListener('popstate', updateQueryDisplay);
+</script>

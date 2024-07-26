@@ -1,15 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import { Hero } from '../components/Hero.jsx'
+import { About } from '../components/About.jsx'
 import { Navbar } from '../components/Navbar.jsx'
 import { Footer } from '../components/Footer.jsx'
-import { ScrollUpButton } from '../components/ScrollUpButton'
 import '../styles/Theme.css'
 import '../styles/Diagonals.css'
 ---
-<Layout title="Doughploma">
+<Layout title="About - Doughploma">
   <Navbar client:load />
-  <Hero client:load />
+  <About client:load />
   <Footer />
-  <ScrollUpButton client:load />
 </Layout>
